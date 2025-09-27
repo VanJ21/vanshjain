@@ -490,12 +490,8 @@ section {
     height: 200px;
     background: var(--gradient-secondary);
     display: flex;
-    align-items: center;
+    align-items: top;
     justify-content: center;
-}
-
-.project-placeholder {
-    font-size: 3rem;
 }
 
 .project-content {

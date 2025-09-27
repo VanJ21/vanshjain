@@ -468,20 +468,5 @@ const debouncedScrollHandler = debounce(function() {
 
 window.addEventListener('scroll', debouncedScrollHandler);
 
-// Console welcome message
-console.log(`
-🚀 Welcome to Vansh Jain's Portfolio!
-💻 Built with HTML, CSS, and JavaScript
-🎨 Modern design with smooth animations
-📱 Fully responsive and accessible
-🔧 Open source and customizable
 
-Feel free to explore the code and use it as inspiration for your own projects!
-`);
-
-// Export functions for potential external use
-window.PortfolioJS = {
-    scrollToTop,
-    showNotification,
-    isValidEmail
-};
+console.log(`test`);
