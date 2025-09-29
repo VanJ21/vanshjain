@@ -83,11 +83,6 @@ function initScrollAnimations() {
                 if (entry.target.classList.contains('skill-progress')) {
                     animateSkillBar(entry.target);
                 }
-                
-                // Special handling for stats
-                if (entry.target.classList.contains('stat-number')) {
-                    animateCounter(entry.target);
-                }
             }
         });
     }, observerOptions);
@@ -113,24 +108,6 @@ function initSkillBars() {
 function animateSkillBar(element) {
     const width = element.getAttribute('data-width');
     element.style.width = width;
-}
-
-// Counter animation for stats
-function animateCounter(element) {
-    const target = parseInt(element.textContent);
-    const duration = 2000; // 2 seconds
-    const increment = target / (duration / 16); // 60fps
-    let current = 0;
-
-    const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-            element.textContent = target + '+';
-            clearInterval(timer);
-        } else {
-            element.textContent = Math.floor(current) + '+';
-        }
-    }, 16);
 }
 
 // Contact form functionality
@@ -160,6 +137,7 @@ function initContactForm() {
             
             // Simulate form submission
             showNotification('Thank you for your message! I\'ll get back to you soon.', 'success');
+
             form.reset();
         });
     }
